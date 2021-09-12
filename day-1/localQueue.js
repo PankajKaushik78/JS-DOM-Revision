@@ -1,3 +1,6 @@
+// Q - Create a queue which supports the push, pop and top operation
+// S - Here we are using closure to achieve this
+
 function queue() {
   let arr = [];
 

@@ -2,14 +2,14 @@
 // let str = "abc"
 // console.log(str.length);
 
-//slice
+//slice - returns a new string and does not change original string
 // let str = "the end";
 // let newString = str.slice(2);
 // console.log(str);
 // console.log(newString);
 
 //replace
-// only replaces first occurance from the the start and does not change the original string
+// only replaces first occurence from the the start and does not change the original string
 // let str = "the moon is sweet good moon";
 
 // let newString = str.replace("moon", "sugar");
