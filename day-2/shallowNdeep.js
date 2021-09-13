@@ -7,19 +7,21 @@ let o = {
   },
 };
 
-// let copyObj = {}
+let copyObj = {}
 
-// //shallow
-// for(x in o){
-//     copyObj[x] = o[x]
-// }
+//SHALLOW COPY
+for(x in o){
+  // primitve values will be copied correctly but for non-primitve values their address will be copied 
+  copyObj[x] = o[x] 
+}
 
 // console.log(copyObj);
 // console.log(o);
 
+// Hack to create a DEEP COPY
 let deepCopy = JSON.parse(JSON.stringify(o));
-
 console.log(deepCopy);
+
 
 let a = [{ name: "Hello" }];
 

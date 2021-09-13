@@ -9,24 +9,26 @@ let f = A();
 
 f();
 
-// function memoFib() {
-//   let memo = {};
 
-//   return function fibonacci(num) {
-//     if (memo[num]) {
-//       return memo[num];
-//     } else {
-//       if (num < 2) {
-//         return num;
-//       } else {
-//         let ans = fibonacci(num - 1) + fibonacci(num - 2);
-//         memo[num] = ans
-//         return ans;
-//       }
-//     }
-//   };
-// }
+// Application of closure in memoization
+function memoFib() {
+  let memo = {};
 
-// let f = memoFib();
+  return function fibonacci(num) {
+    if (memo[num]) {
+      return memo[num];
+    } else {
+      if (num < 2) {
+        return num;
+      } else {
+        let ans = fibonacci(num - 1) + fibonacci(num - 2);
+        memo[num] = ans
+        return ans;
+      }
+    }
+  };
+}
 
-// console.log(f(50));
+let f = memoFib();
+
+console.log(f(50));
