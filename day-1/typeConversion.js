@@ -15,6 +15,14 @@
 // Number(true) = 1
 // Number("true") = NaN , because it is string inside which cannot be converted to number directly 
 
+
+// Truthy - true, All numbers except 0, [], {}, [...], {...}, +-Infinity, "non-empty-string", Date
+// Falsy - false, 0, empty strings ("", '', ``), null, undefined, NaN  
+
+// Truthy values - https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+// Falsy values - https://developer.mozilla.org/en-US/docs/Glossary/Falsy
+
+
 (function () {
     if ((-100 && 100 && "0") || [] === true || 0) {
 
@@ -38,3 +46,4 @@
       }
     } 
   })();
+  // Output = 1,2,5,6
