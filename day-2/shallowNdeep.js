@@ -15,6 +15,8 @@ for(x in o){
   copyObj[x] = o[x] 
 }
 
+// *** Whenever we pass an arguement to a function its shallow copy is passed
+
 // console.log(copyObj);
 // console.log(o);
 

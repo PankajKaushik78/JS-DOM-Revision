@@ -1,17 +1,46 @@
-Array.prototype.myFilter = function(cb) {
-    let ans = [];
-    for(let i=0; i<this.length; i++) {
-        if(cb(this[i])) {
-            ans.push(this[i]);
-        }
-    }
-    return ans; 
-};
+// Q find the output of the following code 
 
-function isEven(x) {
-    console.log("this is me");
-    return x % 2 === 0;
+let a = ["a", "b"]
+a[2] = a 
+
+function f(a) {
+    a = a[2]
+    console.log(a);
+    let n = Array("a", "b")
+    console.log(a[2] = n);
+    console.log(a);
+    console.log(n);
+    a = n;
+    console.log(a);
 }
 
-let arr = [1,2,3,4]
-console.log(arr.myFilter(isEven));
+
+console.log(a);
+f(a)
+console.log(a);
+
+// Options:
+
+// 1)
+// ["a", "b", ["a", "b"]]
+// ["a", "b"]
+// ["a", "b", ["a", "b"]]
+// ["a", "b", ["a", "b"]]
+// ["a", "b"]
+// ["a", "b"]
+// ["a", "b", ["a", "b"]]
+
+
+
+// 2)
+// [ 'a', 'b', [Circular] ]
+// [ 'a', 'b', [Circular] ]
+// [ 'a', 'b' ]
+// [ 'a', 'b', [ 'a', 'b' ] ]
+// [ 'a', 'b' ]
+// [ 'a', 'b' ]
+// [ 'a', 'b', [ 'a', 'b' ] ]
+
+
+// Solution:
+// option 2
