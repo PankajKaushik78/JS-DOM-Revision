@@ -1,14 +1,24 @@
-let p1 = fetch("https://jsonplaceholder.typicode.com/posts");
-let p2 = fetch("https://jsonplaceholder.typicode.com/users");
-
-//takes an array of promises
-//gives back a promise
-//which resolves when all the promises in the array resolves
-
-let p3 = Promise.all([p1, p2]);
-
-//when the returned promise from promise.all resolves it
-// contains an array with values of the promises passed to promise.all
-p3.then(function (valArr) {
-  console.log(valArr);
+let p = new Promise(function executor(resolve, reject) {
+  setTimeout(function afterSomeTime() {
+      resolve("yo yo i am resolved");
+  }, 2000);
 });
+
+// This function behaves asynchronously
+async function testing() {
+  let res = await p; // res will get the resolved value of this promise p
+  console.log(res);
+}
+
+testing();
+
+
+
+/*
+  Pointers:
+    1. Async-await is just syntactic sugar over the promises
+    2.This whole function behaves aysnchronously
+      async function name() {
+        let res = await fetch(...) // res will get the resolved or rejected value from this promise
+      }
+*/ 

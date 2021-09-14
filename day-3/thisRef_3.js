@@ -6,7 +6,7 @@
 // console.log(this); // browser's global object = window object
 
 // function f(){
-//     console.log(this);  //global object = window object 
+//     console.log(this);  //undefined
 // }
 
 // f()
